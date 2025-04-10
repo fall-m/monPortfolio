@@ -1,0 +1,390 @@
+:root {
+  --primary: #7f5af0;
+  --primary-light: #5a4bdb;
+  --background: #0e0e14;
+  --text: #f1f1f1;
+  --card: #1b1b26;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+/* NAVBAR */
+.navbar {
+  background: var(--card);
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 26px;
+  color: var(--primary);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-links a:hover {
+  color: var(--primary-light);
+}
+
+/* HERO */
+.hero {
+  /* Arrière-plan avec dégradé animé en continu */
+  background: linear-gradient(-45deg, var(--primary), var(--primary-light), #3c3c9e, var(--primary));
+  background-size: 400% 400%; /* Nécessaire pour que l’animation bouge */
+  animation: gradientMove 15s ease infinite;
+
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.btn {
+  background: white;
+  color: var(--primary);
+  padding: 12px 24px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #ddddff;
+}
+
+/* SECTIONS */
+.section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: var(--primary);
+}
+
+.section.alt {
+  background-color: var(--card);
+}
+
+/* PROJETS */
+.project-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+}
+
+.card {
+  background: var(--card);
+  color: var(--text);
+  padding: 25px;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  flex: 1 1 280px;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+/* COMPÉTENCES */
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+}
+
+.skill {
+  background: var(--card);
+  padding: 20px;
+  border-radius: 14px;
+  width: 120px;
+  text-align: center;
+}
+
+.skill img {
+  width: 60px;
+  margin-bottom: 10px;
+}
+
+.skill p {
+  margin: 0;
+  font-weight: bold;
+}
+
+/* PIED DE PAGE supprimé */
+
+/* Bouton CV espacé */
+.cv-button {
+  display: inline-block;
+  margin-top: 25px;
+}
+
+/* ======================== */
+/* 🎬 ANIMATION CONTINUE DU FOND HERO */
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Mise en forme de la liste BTS SIO SLAM */
+.bts-list p {
+  margin-bottom: 15px;
+  text-align: left;
+}
+/* ============================= */
+/* 🎨 STYLE DU TABLEAU BTS */
+.table-container {
+  overflow-x: auto;
+  margin-top: 30px;
+}
+
+.bts-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--card);
+  color: var(--text);
+  border-radius: 10px;
+  overflow: hidden;
+  animation: fadeInTable 1.5s ease;
+}
+
+.bts-table th,
+.bts-table td {
+  padding: 15px 20px;
+  text-align: left;
+  border-bottom: 1px solid #333;
+}
+
+.bts-table th {
+  background-color: var(--primary);
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.bts-table tr:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  transition: background 0.3s ease;
+}
+
+/* ✨ Animation d’apparition */
+@keyframes fadeInTable {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ======================================= */
+/* 🖼️ STYLE DES NOUVEAUX PROJETS (empilés) */
+.project-item {
+  background-color: var(--card);
+  padding: 25px;
+  border-radius: 14px;
+  margin-bottom: 40px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  animation: fadeInUp 1s ease;
+}
+
+.project-img {
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto;
+  display: block;
+  border-radius: 10px;
+}
+
+.project-video {
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto;
+  display: block;
+  border-radius: 10px;
+}
+
+.manga-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+/* Animation douce */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* ============================= */
+/* 💻 COMPÉTENCES EN 2 COLONNES */
+.skills-grid-two-cols {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.skills-grid-two-cols .skill {
+  display: flex;
+  align-items: center;
+  background-color: var(--card);
+  padding: 15px 20px;
+  border-radius: 10px;
+  gap: 15px;
+  animation: fadeInUp 0.8s ease;
+}
+
+.skills-grid-two-cols .skill img {
+  width: 40px;
+  height: auto;
+}
+
+.skills-grid-two-cols .skill p {
+  margin: 0;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+/* ============================= */
+/* 🧱 Mise en forme Stages & Expériences */
+.experience-item {
+  display: flex;
+  gap: 30px;
+  align-items: center; /* Centrage vertical pour image + texte */
+  margin-bottom: 40px;
+  background-color: var(--card);
+  padding: 20px;
+  border-radius: 12px;
+  animation: fadeInUp 0.8s ease;
+  flex-wrap: wrap; /* Permet de s’adapter aux petits écrans */
+}
+
+.experience-item img {
+  width: auto;
+  height: 120px; /* Taille réduite pour voir l’image entière sans perte de qualité */
+  object-fit: contain; /* Affiche toute l’image sans la couper */
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+
+.experience-text {
+  flex: 1;
+}
+
+.experience-text h4 {
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+
+.experience-text p {
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+
+/* ========================== */
+/* 📊 SECTION VEILLE TECHNOLOGIQUE */
+.veille-img {
+  width: 100%;
+  max-width: 700px;
+  margin: 30px auto;
+  display: block;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.4);
+}
+
+.veille-timeline {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.veille-block {
+  background-color: var(--card);
+  padding: 20px 25px;
+  border-left: 4px solid var(--primary);
+  border-radius: 10px;
+  text-align: left;
+  animation: fadeInUp 0.8s ease;
+}
+
+.veille-block h4 {
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+
+.veille-block p {
+  margin: 0;
+}
+

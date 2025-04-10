@@ -1,51 +1,300 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio - Fall Mohamed</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js"></script>
 </head>
 <body>
+  <div id="top"></div> <!-- ✅ Ancre pour retour accueil -->
 
-    <header>
-        <h1>Mon Portfolio</h1>
-        <nav>
-            <ul>
-                <li><a href="#accueil">Accueil</a></li>
-                <li><a href="#a-propos">À Propos</a></li>
-                <li><a href="#projets">Projets</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+  <!-- BARRE DE NAVIGATION -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="#top" class="logo">Fall Mohamed</a> <!-- ✅ Logo cliquable -->
+      <ul class="nav-links">
+        <li><a href="#about">À propos</a></li>
+        <li><a href="#bts">BTS SIO</a></li>
+        <li><a href="#projects">Projets</a></li>
+        <li><a href="#skills">Compétences</a></li>
+        <li><a href="#experience">Expériences</a></li>
+        <li><a href="#veille">Veille technologique</a></li>
+      </ul>
+    </div>
+  </nav>
 
-    <section id="accueil">
-        <h2>Bienvenue sur mon portfolio</h2>
-        <p>Découvrez mes réalisations et compétences.</p>
-    </section>
+  <!-- SECTION HERO (accueil) -->
+  <header class="hero">
+    <div class="container">
+      <h1><span class="highlight">Fall Mohamed</span></h1>
+      <p>Étudiant BTS SIO SLAM</p>
+      <a href="#projects" class="btn">Voir mes projets</a>
+    </div>
+  </header>
 
-    <section id="a-propos">
-        <h2>À Propos</h2>
-        <p>Je suis [Votre Nom], un passionné de [Votre Domaine].</p>
-    </section>
+<!-- SECTION À PROPOS -->
+<section id="about" class="section">
+  <div class="container">
+    <h2>À propos</h2>
 
-    <section id="projets">
-        <h2>Mes Projets</h2>
-        <ul>
-            <li>Projet 1 - Description</li>
-            <li>Projet 2 - Description</li>
-            <li>Projet 3 - Description</li>
-        </ul>
-    </section>
+    <!-- Présentation personnelle, restructurée en paragraphes clairs -->
+    <p>
+      Je suis <strong>Fall Mohamed</strong>, étudiant en <strong>2ème année de BTS SIO option SLAM</strong>
+      (Solutions Logicielles et Applications Métiers) au <strong>lycée Parc de Vilgénis à Massy</strong>.
+    </p>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Vous pouvez me contacter à : <a href="mailto:03.fall.mohamed@gmail.com">03.fall.mohamed@gmail.com</a></p>
-    </section>
+    <p>
+      Durant mon parcours, j’ai appris à concevoir et développer des applications modernes et adaptées aux besoins des utilisateurs.
+      J’ai travaillé sur plusieurs projets en équipe comme en autonomie, en utilisant différentes technologies web et logicielles.
+    </p>
 
-    <footer>
-        <p>&copy; 2025 Mon Portfolio</p>
-    </footer>
+    <p>
+      Mes compétences principales incluent : <strong>HTML</strong>, <strong>CSS</strong>, <strong>JavaScript</strong>, <strong>PHP</strong>,
+      <strong>SQL</strong>, <strong>Python</strong> et <strong>C#</strong>. Je suis également à l’aise avec les bases de données, les frameworks,
+      et le travail collaboratif avec Git.
+    </p>
+
+    <p>
+      Curieux, motivé, rigoureux et autonome, je suis prêt à relever de nouveaux défis dans le monde du développement logiciel.
+    </p>
+
+    <!-- Bouton de téléchargement du CV bien espacé -->
+    <a href="doc/cv.pdf" class="btn cv-button" download>Télécharger mon CV</a>
+  </div>
+</section>
+
+<!-- SECTION BTS SIO SLAM -->
+<section id="bts" class="section alt">
+  <div class="container">
+    <h2>Mon BTS SIO SLAM</h2>
+
+    <!-- Introduction -->
+    <p>
+      Le <strong>BTS SIO</strong> (Services Informatiques aux Organisations) forme des techniciens capables de concevoir, développer et maintenir des solutions logicielles.
+      L’option <strong>SLAM</strong> (Solutions Logicielles et Applications Métiers) est orientée développement : création de sites, applications web/mobile, et gestion de bases de données.
+    </p>
+
+    <!-- Tableau des matières -->
+    <div class="table-container">
+      <table class="bts-table">
+        <thead>
+          <tr>
+            <th>Matière</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Programmation</td>
+            <td>Apprentissage des langages HTML, CSS, JavaScript, PHP, Python, C# pour concevoir des solutions logicielles.</td>
+          </tr>
+          <tr>
+            <td>Base de données</td>
+            <td>Création, gestion et requêtage de bases de données avec SQL, MERISE, MCD/MLD/MPD.</td>
+          </tr>
+          <tr>
+            <td>Cybersécurité</td>
+            <td>Notions de sécurité des systèmes d’information, bonnes pratiques, droits d’accès et protection des données.</td>
+          </tr>
+          <tr>
+            <td>CEJM</td>
+            <td>Compréhension de l’environnement juridique, économique et managérial d’une entreprise numérique.</td>
+          </tr>
+          <tr>
+            <td>CGE</td>
+            <td>Développement des compétences en communication écrite et orale à travers l’analyse de documents.</td>
+          </tr>
+          <tr>
+            <td>Anglais</td>
+            <td>Perfectionnement de l’anglais technique, rédactionnel et oral dans un contexte professionnel.</td>
+          </tr>
+          <tr>
+            <td>Mathématiques</td>
+            <td>Outils mathématiques appliqués à l’informatique : logique, statistiques, modélisation.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- SECTION PROJETS -->
+<section id="projects" class="section">
+  <div class="container">
+    <h2>Projets</h2>
+
+    <!-- Projet 1 : Site de gestion d’un zoo -->
+    <div class="project-item">
+      <h3>Site de gestion d’un zoo</h3>
+      <img src="image/zoo.png" alt="Projet Zoo" class="project-img" />
+      <p>
+        Ce projet permet de gérer les informations d’un zoo : liste des animaux, alimentation, fiches de soins, habitats...
+        Il utilise HTML, CSS, PHP et MySQL avec une interface simple pour les employés.
+      </p>
+    </div>
+
+    <!-- Projet 2 : Site de critique et analyse de manga -->
+    <div class="project-item">
+      <h3>Site de critique et analyse de manga</h3>
+      <div class="manga-gallery">
+        <img src="image/mangacritique1.png" alt="Manga Critique 1" class="project-img" />
+        <img src="image/mangacritique2.png" alt="Manga Critique 2" class="project-img" />
+        <video autoplay muted loop class="project-video">
+          <source src="image/mangacritiquevid.mp4" type="video/mp4">
+          Votre navigateur ne supporte pas la lecture de vidéos.
+        </video>
+      </div>
+      <p>
+        Ce site permet aux passionnés de manga de consulter des critiques, donner leur avis et découvrir de nouvelles œuvres.
+        Il propose un système de notation et des fiches détaillées sur chaque titre.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- SECTION COMPÉTENCES -->
+<section id="skills" class="section alt">
+  <div class="container">
+    <h2>Compétences</h2>
+
+    <!-- Grille 2 colonnes -->
+    <div class="skills-grid-two-cols">
+      <div class="skill"><img src="image/html.png" alt="HTML"><p>HTML</p></div>
+      <div class="skill"><img src="image/css.png" alt="CSS"><p>CSS</p></div>
+      <div class="skill"><img src="image/javascript.jpg" alt="JavaScript"><p>JavaScript</p></div>
+      <div class="skill"><img src="image/php.jpg" alt="PHP"><p>PHP</p></div>
+      <div class="skill"><img src="image/sql.png" alt="SQL"><p>SQL / MySQL</p></div>
+      <div class="skill"><img src="image/python.png" alt="Python"><p>Python</p></div>
+      <div class="skill"><img src="image/csharp.png" alt="C#"><p>C#</p></div>
+      <div class="skill"><img src="image/java.png" alt="Java"><p>Java</p></div>
+    </div>
+
+  </div>
+</section>
+
+
+
+<!-- SECTION EXPÉRIENCE -->
+<section id="experience" class="section">
+  <div class="container">
+    <h2>Stages & Expériences Pro</h2>
+
+    <!-- 🎓 STAGES -->
+    <h3>Stages</h3>
+    
+    <div class="experience-item">
+      <img src="image/carrefour.jpg" alt="Stage Carrefour">
+      <div class="experience-text">
+        <h4>Stage 1ère année - Carrefour (siège mondial, Massy)</h4>
+        <p>
+          Support technique de niveau 1 : assistance aux collaborateurs, gestion des incidents, installation de logiciels,
+          dans un environnement informatique d’envergure.
+        </p>
+      </div>
+    </div>
+
+    <div class="experience-item">
+      <img src="image/esekai.jpg" alt="Stage Esekai">
+      <div class="experience-text">
+        <h4>Stage 2ème année - Esekai Agency</h4>
+        <p>
+          Assistant web designer : création graphique et intégration de sites web.
+          Utilisation d’outils comme Figma, Photoshop et HTML/CSS pour mettre en forme des interfaces attractives.
+        </p>
+      </div>
+    </div>
+
+    <!-- 💼 EXPÉRIENCES PRO -->
+    <h3>Expériences professionnelles</h3>
+
+    <div class="experience-item">
+      <img src="image/lesulis.jpg" alt="Job été Mairie des Ulis">
+      <div class="experience-text">
+        <h4>Été 2022 & 2024 - Mairie des Ulis</h4>
+        <p>
+          <strong>Chargé d’événement :</strong> participation à la mise en place de spectacles et animations. Préparation du matériel, logistique, installation.
+        </p>
+        <p>
+          <strong>Agent polyvalent :</strong> aménagement des gymnases et écoles pour la rentrée scolaire. Travaux manuels, organisation des salles.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- SECTION VEILLE TECHNOLOGIQUE -->
+<section id="veille" class="section">
+  <div class="container">
+    <h2>Veille technologique</h2>
+    <h3>L’usage des statistiques avancées dans le football pro et amateur : collecte, traitement et valorisation des données</h3>
+
+    <img src="image/datafoot1.jpg" alt="Illustration football data" class="veille-img">
+
+    <p>
+      Cette veille s’appuie sur des agrégateurs comme <strong>Feedly</strong> et <strong>Google News</strong>, 
+      avec des sources spécialisées : L’Équipe, SoFoot, Football365, FBref, Deux-Zéro, Statista. 
+      Elle met en lumière les usages actuels des données dans le football professionnel et amateur.
+    </p>
+
+    <div class="veille-timeline">
+      <div class="veille-block">
+        <h4>Utilisation en Ligue 1 (2023-2025)</h4>
+        <p>
+          Les clubs de Ligue 1 ont renforcé leur recours aux statistiques avancées pour adapter leur stratégie de jeu.
+          Des plateformes comme <strong>FBref</strong> permettent de suivre les <em>xG</em> (Expected Goals), <em>xA</em> (Expected Assists),
+          ou encore les séquences menant à un tir. Ces données servent à analyser les forces/faiblesses et optimiser les plans de match.
+        </p>
+      </div>
+
+      <div class="veille-block">
+        <h4>Impact sur le recrutement et la gestion de l'effectif</h4>
+        <p>
+          Grâce aux données de performance, les clubs peuvent identifier des <strong>talents sous-cotés</strong> et orienter leurs stratégies de recrutement.
+          Cette approche basée sur la donnée permet une gestion plus fine des budgets et une valorisation des joueurs.
+        </p>
+      </div>
+
+      <div class="veille-block">
+        <h4>alorisation financière des équipes</h4>
+        <p>
+          Selon <strong>Statista</strong>, les clubs utilisent les données statistiques pour estimer la <strong>valeur marchande</strong> des joueurs,
+          un outil crucial pour les négociations de transfert. La donnée devient un levier stratégique pour l’économie du football.
+        </p>
+      </div>
+
+      <div class="veille-block">
+        <h4>Expérience fan enrichie</h4>
+        <p>
+          Des plateformes comme <strong>Deux-Zéro</strong> offrent un accès simplifié à des statistiques détaillées pour le grand public.
+          Les supporters bénéficient d’une lecture plus fine des performances de leur club et d’un engagement renforcé.
+        </p>
+      </div>
+
+      <div class="veille-block">
+        <h4>Football amateur & open data</h4>
+        <p>
+          L’usage des données touche aussi les clubs amateurs : certaines applications gratuites permettent aux entraîneurs
+          d'analyser les performances de leurs joueurs après chaque match (distance parcourue, tirs, zones d'action).
+        </p>
+      </div>
+    </div>
+
+    <img src="image/datafoot2.png" alt="Illustration Data Football" class="veille-img">
+
+    <p>
+      En conclusion, les statistiques avancées sont devenues un outil central dans le football moderne, 
+      influençant à la fois la tactique, le recrutement, la stratégie financière et l’expérience des supporters.
+    </p>
+  </div>
+</section>
+
 
 </body>
 </html>
